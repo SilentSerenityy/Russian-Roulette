@@ -2,7 +2,6 @@
 #Programming Date : February 5th, 2021. 05:50 UTC - 5
 #Program Purpose : Simulates a Russian Roulette game with 6 players and the proper chances of the gun firing.
 
-
 import random
 from random import choice
 #this will randomly pick the player and if the gun fires
@@ -18,7 +17,6 @@ from termcolor import colored
 #red for fired, green for not fired
 
 print("Let's play Russian Roulette!")
-
 you = input("Your name: ")
 print()
 
@@ -62,3 +60,5 @@ time.sleep(2)
 for x in players:
   print(f"{x} has won!")
   #this loops the printing of players that won
+
+  #one day I'll add a play again?
