@@ -51,11 +51,14 @@ while n > -1:
     #same aspect as the above, now the text is red, and not only will the chance of firing be removed, but the player as well
     fires.remove(fireturn)
     players.remove(playerturn)
+    #removes the chance from the list, and the player from the list as well.
+    #this will be able to narrow down the chances and make it more realistic.
 
   n = n - 1
   #this is the looping of the chamber spins
 
 time.sleep(2)
+#less in your face
 
 for x in players:
   print(f"{x} has won!")
