@@ -20,16 +20,13 @@ print("Let's play Russian Roulette!")
 you = input("Your name: ")
 print()
 
-players = ["John" , "Ryan" , "Nelson" , "Sam" , you]
-fires = ["Yes" , "No" , "No" , "No" , "No" , "No"]
-#a list of the players and if the bullet fires.
-#being that there is only one bullet only one "yes" has to exist
+players = ["John" , "Ryan" , "Nelson" , "Sam" , you] #a list of the players and if the bullet fires.
+fires = ["Yes" , "No" , "No" , "No" , "No" , "No"] #being that there is only one bullet only one "yes" has to exist
 
-n = 5
-#even though there is 6 chambers/spins/turns, put 5 here because the loop only happens during the second turn, so it will say 5 bullets left during the first spin
 
-while n > -1:
-  #while the amount bullets is more than 0
+n = 5 #even though there is 6 chambers/spins/turns, put 5 here because the loop only happens during the second turn, so it will say 5 bullets left during the first spin
+
+while n > -1: #while the amount bullets is more than 0
 
   print("Spinning the revolver...\n")
   time.sleep(2)
@@ -54,14 +51,11 @@ while n > -1:
     #removes the chance from the list, and the player from the list as well.
     #this will be able to narrow down the chances and make it more realistic.
 
-  n = n - 1
-  #this is the looping of the chamber spins
+  n = n - 1 #this is the looping of the chamber spins
 
-time.sleep(2)
-#less in your face
+time.sleep(2) #less in your face
 
 for x in players:
-  print(f"{x} has won!")
-  #this loops the printing of players that won
+  print(f"{x} has won!") #this is the looping of the players that won
 
   #one day I'll add a play again?
