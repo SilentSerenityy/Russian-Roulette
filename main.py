@@ -24,7 +24,7 @@ players = ["John" , "Ryan" , "Nelson" , "Sam" , you] #a list of the players and 
 fires = ["Yes" , "No" , "No" , "No" , "No" , "No"] #being that there is only one bullet only one "yes" has to exist
 
 
-n = 5 #even though there is 6 chambers/spins/turns, put 5 here because the loop only happens during the second turn, so it will say 5 bullets left during the first spin
+n = 5 #even though there is 6 chambers/spins/turns, Python considers "0" as a "1", and therefore putting "6" would incorrectly simulate 7 bullets
 
 while n > -1: #while the amount bullets is more than 0
 
@@ -40,12 +40,12 @@ while n > -1: #while the amount bullets is more than 0
 
   if fireturn == "No":
     print(colored(f"{playerturn} got lucky. There are {n} turns of the chamber left.\n","green"))
-    #the colored part is coming from the package, it colors the text green as told by ,"green", in this case to indicate the player has not been indicated. The below line will remove that chance of the gun firing from the list
+    #the colored part is coming from the package, it colors the text green as told by ,"green", in this case to indicate the player has been lucky. The below line will remove that chance of the gun firing from the list
     fires.remove(fireturn)
 
   else:
     print(colored(f"{playerturn} has been eliminated. There are {n} turns of the chamber left.\n","red"))
-    #same aspect as the above, now the text is red, and not only will the chance of firing be removed, but the player as well
+    #same aspect as the above, now the text is red, and not only will the chance of firing be removed, but the player as well, as they are "unlucky"
     fires.remove(fireturn)
     players.remove(playerturn)
     #removes the chance from the list, and the player from the list as well.
@@ -53,9 +53,9 @@ while n > -1: #while the amount bullets is more than 0
 
   n = n - 1 #this is the looping of the chamber spins
 
-time.sleep(2) #less in your face
+time.sleep(2) #less in your face, otherwise the entire script would've been completed in literally a second
 
 for x in players:
-  print(f"{x} has won!") #this is the looping of the players that won
+  print(f"{x} has won!") #this is the looping of the players that won, or haven't been "unlucky"
 
   #one day I'll add a play again?
